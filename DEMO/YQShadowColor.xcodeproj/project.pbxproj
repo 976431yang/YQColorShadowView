@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		950E2D591DE819230053D79E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 950E2D581DE819230053D79E /* main.m */; };
+		950E2D5C1DE819230053D79E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 950E2D5B1DE819230053D79E /* AppDelegate.m */; };
+		950E2D621DE819230053D79E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950E2D601DE819230053D79E /* Main.storyboard */; };
+		950E2D651DE819230053D79E /* YQShadowColor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 950E2D631DE819230053D79E /* YQShadowColor.xcdatamodeld */; };
+		950E2D671DE819230053D79E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 950E2D661DE819230053D79E /* Assets.xcassets */; };
+		950E2D6A1DE819230053D79E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950E2D681DE819230053D79E /* LaunchScreen.storyboard */; };
+		950E2D751DE819230053D79E /* YQShadowColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 950E2D741DE819230053D79E /* YQShadowColorTests.m */; };
+		950E2D801DE819230053D79E /* YQShadowColorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 950E2D7F1DE819230053D79E /* YQShadowColorUITests.m */; };
+		950E2D991DE8342C0053D79E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 950E2D981DE8342C0053D79E /* ViewController.m */; };
+		950E2D9E1DEC1ADE0053D79E /* white.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 950E2D9D1DEC1ADE0053D79E /* white.PNG */; };
+		950E2DA31DEC1F440053D79E /* test1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 950E2D9F1DEC1F440053D79E /* test1.PNG */; };
+		950E2DA41DEC1F440053D79E /* test2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 950E2DA01DEC1F440053D79E /* test2.PNG */; };
+		950E2DA51DEC1F440053D79E /* test4.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 950E2DA11DEC1F440053D79E /* test4.PNG */; };
+		950E2DA61DEC1F440053D79E /* test3.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 950E2DA21DEC1F440053D79E /* test3.PNG */; };
+		9575BF501DED92380047AFBF /* YQColorShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9575BF4F1DED92380047AFBF /* YQColorShadowView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		950E2D711DE819230053D79E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 950E2D4C1DE819230053D79E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 950E2D531DE819230053D79E;
+			remoteInfo = YQShadowColor;
+		};
+		950E2D7C1DE819230053D79E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 950E2D4C1DE819230053D79E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 950E2D531DE819230053D79E;
+			remoteInfo = YQShadowColor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		950E2D541DE819230053D79E /* YQShadowColor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YQShadowColor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		950E2D581DE819230053D79E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		950E2D5A1DE819230053D79E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		950E2D5B1DE819230053D79E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		950E2D5D1DE819230053D79E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		950E2D611DE819230053D79E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		950E2D641DE819230053D79E /* YQShadowColor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YQShadowColor.xcdatamodel; sourceTree = "<group>"; };
+		950E2D661DE819230053D79E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		950E2D691DE819230053D79E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		950E2D6B1DE819230053D79E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		950E2D701DE819230053D79E /* YQShadowColorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YQShadowColorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		950E2D741DE819230053D79E /* YQShadowColorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQShadowColorTests.m; sourceTree = "<group>"; };
+		950E2D761DE819230053D79E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		950E2D7B1DE819230053D79E /* YQShadowColorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YQShadowColorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		950E2D7F1DE819230053D79E /* YQShadowColorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQShadowColorUITests.m; sourceTree = "<group>"; };
+		950E2D811DE819230053D79E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		950E2D981DE8342C0053D79E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		950E2D9D1DEC1ADE0053D79E /* white.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = white.PNG; path = YQImageTool/YQImageCompressor/white.PNG; sourceTree = "<group>"; };
+		950E2D9F1DEC1F440053D79E /* test1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test1.PNG; sourceTree = "<group>"; };
+		950E2DA01DEC1F440053D79E /* test2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test2.PNG; sourceTree = "<group>"; };
+		950E2DA11DEC1F440053D79E /* test4.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test4.PNG; sourceTree = "<group>"; };
+		950E2DA21DEC1F440053D79E /* test3.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test3.PNG; sourceTree = "<group>"; };
+		9575BF4E1DED92380047AFBF /* YQColorShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQColorShadowView.h; sourceTree = "<group>"; };
+		9575BF4F1DED92380047AFBF /* YQColorShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQColorShadowView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		950E2D511DE819230053D79E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950E2D6D1DE819230053D79E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950E2D781DE819230053D79E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		950E2D4B1DE819230053D79E = {
+			isa = PBXGroup;
+			children = (
+				9575BF4D1DED92380047AFBF /* YQColorShadowView */,
+				950E2D561DE819230053D79E /* YQShadowColor */,
+				950E2D731DE819230053D79E /* YQShadowColorTests */,
+				950E2D7E1DE819230053D79E /* YQShadowColorUITests */,
+				950E2D551DE819230053D79E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		950E2D551DE819230053D79E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				950E2D541DE819230053D79E /* YQShadowColor.app */,
+				950E2D701DE819230053D79E /* YQShadowColorTests.xctest */,
+				950E2D7B1DE819230053D79E /* YQShadowColorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		950E2D561DE819230053D79E /* YQShadowColor */ = {
+			isa = PBXGroup;
+			children = (
+				950E2D5A1DE819230053D79E /* AppDelegate.h */,
+				950E2D5B1DE819230053D79E /* AppDelegate.m */,
+				950E2D5D1DE819230053D79E /* ViewController.h */,
+				950E2D981DE8342C0053D79E /* ViewController.m */,
+				950E2D601DE819230053D79E /* Main.storyboard */,
+				950E2D661DE819230053D79E /* Assets.xcassets */,
+				950E2D681DE819230053D79E /* LaunchScreen.storyboard */,
+				950E2D6B1DE819230053D79E /* Info.plist */,
+				950E2D631DE819230053D79E /* YQShadowColor.xcdatamodeld */,
+				950E2D571DE819230053D79E /* Supporting Files */,
+			);
+			path = YQShadowColor;
+			sourceTree = "<group>";
+		};
+		950E2D571DE819230053D79E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				950E2D9D1DEC1ADE0053D79E /* white.PNG */,
+				950E2D9F1DEC1F440053D79E /* test1.PNG */,
+				950E2DA01DEC1F440053D79E /* test2.PNG */,
+				950E2DA11DEC1F440053D79E /* test4.PNG */,
+				950E2DA21DEC1F440053D79E /* test3.PNG */,
+				950E2D581DE819230053D79E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		950E2D731DE819230053D79E /* YQShadowColorTests */ = {
+			isa = PBXGroup;
+			children = (
+				950E2D741DE819230053D79E /* YQShadowColorTests.m */,
+				950E2D761DE819230053D79E /* Info.plist */,
+			);
+			path = YQShadowColorTests;
+			sourceTree = "<group>";
+		};
+		950E2D7E1DE819230053D79E /* YQShadowColorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				950E2D7F1DE819230053D79E /* YQShadowColorUITests.m */,
+				950E2D811DE819230053D79E /* Info.plist */,
+			);
+			path = YQShadowColorUITests;
+			sourceTree = "<group>";
+		};
+		9575BF4D1DED92380047AFBF /* YQColorShadowView */ = {
+			isa = PBXGroup;
+			children = (
+				9575BF4E1DED92380047AFBF /* YQColorShadowView.h */,
+				9575BF4F1DED92380047AFBF /* YQColorShadowView.m */,
+			);
+			name = YQColorShadowView;
+			path = YQShadowColor/YQColorShadowView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		950E2D531DE819230053D79E /* YQShadowColor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 950E2D841DE819230053D79E /* Build configuration list for PBXNativeTarget "YQShadowColor" */;
+			buildPhases = (
+				950E2D501DE819230053D79E /* Sources */,
+				950E2D511DE819230053D79E /* Frameworks */,
+				950E2D521DE819230053D79E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YQShadowColor;
+			productName = YQShadowColor;
+			productReference = 950E2D541DE819230053D79E /* YQShadowColor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		950E2D6F1DE819230053D79E /* YQShadowColorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 950E2D871DE819230053D79E /* Build configuration list for PBXNativeTarget "YQShadowColorTests" */;
+			buildPhases = (
+				950E2D6C1DE819230053D79E /* Sources */,
+				950E2D6D1DE819230053D79E /* Frameworks */,
+				950E2D6E1DE819230053D79E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				950E2D721DE819230053D79E /* PBXTargetDependency */,
+			);
+			name = YQShadowColorTests;
+			productName = YQShadowColorTests;
+			productReference = 950E2D701DE819230053D79E /* YQShadowColorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		950E2D7A1DE819230053D79E /* YQShadowColorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 950E2D8A1DE819230053D79E /* Build configuration list for PBXNativeTarget "YQShadowColorUITests" */;
+			buildPhases = (
+				950E2D771DE819230053D79E /* Sources */,
+				950E2D781DE819230053D79E /* Frameworks */,
+				950E2D791DE819230053D79E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				950E2D7D1DE819230053D79E /* PBXTargetDependency */,
+			);
+			name = YQShadowColorUITests;
+			productName = YQShadowColorUITests;
+			productReference = 950E2D7B1DE819230053D79E /* YQShadowColorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		950E2D4C1DE819230053D79E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = ProblenChild;
+				TargetAttributes = {
+					950E2D531DE819230053D79E = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = CKAC5QB95T;
+						ProvisioningStyle = Automatic;
+					};
+					950E2D6F1DE819230053D79E = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = CKAC5QB95T;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 950E2D531DE819230053D79E;
+					};
+					950E2D7A1DE819230053D79E = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = CKAC5QB95T;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 950E2D531DE819230053D79E;
+					};
+				};
+			};
+			buildConfigurationList = 950E2D4F1DE819230053D79E /* Build configuration list for PBXProject "YQShadowColor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 950E2D4B1DE819230053D79E;
+			productRefGroup = 950E2D551DE819230053D79E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				950E2D531DE819230053D79E /* YQShadowColor */,
+				950E2D6F1DE819230053D79E /* YQShadowColorTests */,
+				950E2D7A1DE819230053D79E /* YQShadowColorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		950E2D521DE819230053D79E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950E2DA51DEC1F440053D79E /* test4.PNG in Resources */,
+				950E2D6A1DE819230053D79E /* LaunchScreen.storyboard in Resources */,
+				950E2D671DE819230053D79E /* Assets.xcassets in Resources */,
+				950E2D621DE819230053D79E /* Main.storyboard in Resources */,
+				950E2D9E1DEC1ADE0053D79E /* white.PNG in Resources */,
+				950E2DA31DEC1F440053D79E /* test1.PNG in Resources */,
+				950E2DA41DEC1F440053D79E /* test2.PNG in Resources */,
+				950E2DA61DEC1F440053D79E /* test3.PNG in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950E2D6E1DE819230053D79E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950E2D791DE819230053D79E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		950E2D501DE819230053D79E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950E2D991DE8342C0053D79E /* ViewController.m in Sources */,
+				950E2D651DE819230053D79E /* YQShadowColor.xcdatamodeld in Sources */,
+				950E2D5C1DE819230053D79E /* AppDelegate.m in Sources */,
+				950E2D591DE819230053D79E /* main.m in Sources */,
+				9575BF501DED92380047AFBF /* YQColorShadowView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950E2D6C1DE819230053D79E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950E2D751DE819230053D79E /* YQShadowColorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950E2D771DE819230053D79E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950E2D801DE819230053D79E /* YQShadowColorUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		950E2D721DE819230053D79E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 950E2D531DE819230053D79E /* YQShadowColor */;
+			targetProxy = 950E2D711DE819230053D79E /* PBXContainerItemProxy */;
+		};
+		950E2D7D1DE819230053D79E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 950E2D531DE819230053D79E /* YQShadowColor */;
+			targetProxy = 950E2D7C1DE819230053D79E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		950E2D601DE819230053D79E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				950E2D611DE819230053D79E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		950E2D681DE819230053D79E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				950E2D691DE819230053D79E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		950E2D821DE819230053D79E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		950E2D831DE819230053D79E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		950E2D851DE819230053D79E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CKAC5QB95T;
+				INFOPLIST_FILE = YQShadowColor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.problenchild.YQShadowColor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		950E2D861DE819230053D79E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CKAC5QB95T;
+				INFOPLIST_FILE = YQShadowColor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.problenchild.YQShadowColor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		950E2D881DE819230053D79E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CKAC5QB95T;
+				INFOPLIST_FILE = YQShadowColorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.problenchild.YQShadowColorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YQShadowColor.app/YQShadowColor";
+			};
+			name = Debug;
+		};
+		950E2D891DE819230053D79E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CKAC5QB95T;
+				INFOPLIST_FILE = YQShadowColorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.problenchild.YQShadowColorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YQShadowColor.app/YQShadowColor";
+			};
+			name = Release;
+		};
+		950E2D8B1DE819230053D79E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = CKAC5QB95T;
+				INFOPLIST_FILE = YQShadowColorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.problenchild.YQShadowColorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = YQShadowColor;
+			};
+			name = Debug;
+		};
+		950E2D8C1DE819230053D79E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = CKAC5QB95T;
+				INFOPLIST_FILE = YQShadowColorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.problenchild.YQShadowColorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = YQShadowColor;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		950E2D4F1DE819230053D79E /* Build configuration list for PBXProject "YQShadowColor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950E2D821DE819230053D79E /* Debug */,
+				950E2D831DE819230053D79E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		950E2D841DE819230053D79E /* Build configuration list for PBXNativeTarget "YQShadowColor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950E2D851DE819230053D79E /* Debug */,
+				950E2D861DE819230053D79E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		950E2D871DE819230053D79E /* Build configuration list for PBXNativeTarget "YQShadowColorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950E2D881DE819230053D79E /* Debug */,
+				950E2D891DE819230053D79E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		950E2D8A1DE819230053D79E /* Build configuration list for PBXNativeTarget "YQShadowColorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950E2D8B1DE819230053D79E /* Debug */,
+				950E2D8C1DE819230053D79E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		950E2D631DE819230053D79E /* YQShadowColor.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				950E2D641DE819230053D79E /* YQShadowColor.xcdatamodel */,
+			);
+			currentVersion = 950E2D641DE819230053D79E /* YQShadowColor.xcdatamodel */;
+			path = YQShadowColor.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 950E2D4C1DE819230053D79E /* Project object */;
+}
