@@ -44,6 +44,29 @@
     //添加到view上显示
     [self.view addSubview:self.shadowView];
     
+    YQColorShadowView *ShadowView = [[YQColorShadowView alloc]initWithFrame:CGRectMake(0,
+                                                                                       0,
+                                                                                       100,
+                                                                                       100)];
+    
+    ShadowView.image = [UIImage imageNamed:@"test.png"];
+    [self.view addSubview:ShadowView];
+    
+    //更换图片
+    ShadowView.image = [UIImage imageNamed:@"test.png"];
+    //显示圆角
+    ShadowView.showCornerRadius = YES;
+    //圆角大小
+    ShadowView.cornerWidth = 10;
+    //彩色阴影的透明度0~1
+    ShadowView.shadowAlpha = 1;
+    //彩色阴影的宽度
+    ShadowView.shadowWidth = 40;
+    //像ios10系统音乐一样，阴影稍稍向下一点
+    ShadowView.shadowLittleDown = YES;
+    //关闭阴影
+    ShadowView.closeShadow = NO;
+    
     //设置图片
     self.shadowView.image = [UIImage imageNamed:@"test2.PNG"];
     
