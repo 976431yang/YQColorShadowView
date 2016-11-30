@@ -16,12 +16,12 @@
 		950E2D751DE819230053D79E /* YQShadowColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 950E2D741DE819230053D79E /* YQShadowColorTests.m */; };
 		950E2D801DE819230053D79E /* YQShadowColorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 950E2D7F1DE819230053D79E /* YQShadowColorUITests.m */; };
 		950E2D991DE8342C0053D79E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 950E2D981DE8342C0053D79E /* ViewController.m */; };
-		950E2D9E1DEC1ADE0053D79E /* white.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 950E2D9D1DEC1ADE0053D79E /* white.PNG */; };
 		950E2DA31DEC1F440053D79E /* test1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 950E2D9F1DEC1F440053D79E /* test1.PNG */; };
 		950E2DA41DEC1F440053D79E /* test2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 950E2DA01DEC1F440053D79E /* test2.PNG */; };
 		950E2DA51DEC1F440053D79E /* test4.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 950E2DA11DEC1F440053D79E /* test4.PNG */; };
 		950E2DA61DEC1F440053D79E /* test3.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 950E2DA21DEC1F440053D79E /* test3.PNG */; };
 		9575BF501DED92380047AFBF /* YQColorShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9575BF4F1DED92380047AFBF /* YQColorShadowView.m */; };
+		95A1C96F1DEECB1F007BCF3E /* white.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 95A1C96E1DEECB1F007BCF3E /* white.PNG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,13 +59,13 @@
 		950E2D7F1DE819230053D79E /* YQShadowColorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQShadowColorUITests.m; sourceTree = "<group>"; };
 		950E2D811DE819230053D79E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		950E2D981DE8342C0053D79E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		950E2D9D1DEC1ADE0053D79E /* white.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = white.PNG; path = YQImageTool/YQImageCompressor/white.PNG; sourceTree = "<group>"; };
 		950E2D9F1DEC1F440053D79E /* test1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test1.PNG; sourceTree = "<group>"; };
 		950E2DA01DEC1F440053D79E /* test2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test2.PNG; sourceTree = "<group>"; };
 		950E2DA11DEC1F440053D79E /* test4.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test4.PNG; sourceTree = "<group>"; };
 		950E2DA21DEC1F440053D79E /* test3.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test3.PNG; sourceTree = "<group>"; };
 		9575BF4E1DED92380047AFBF /* YQColorShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQColorShadowView.h; sourceTree = "<group>"; };
 		9575BF4F1DED92380047AFBF /* YQColorShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQColorShadowView.m; sourceTree = "<group>"; };
+		95A1C96E1DEECB1F007BCF3E /* white.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.PNG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,11 +134,11 @@
 		950E2D571DE819230053D79E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				950E2D9D1DEC1ADE0053D79E /* white.PNG */,
 				950E2D9F1DEC1F440053D79E /* test1.PNG */,
 				950E2DA01DEC1F440053D79E /* test2.PNG */,
 				950E2DA11DEC1F440053D79E /* test4.PNG */,
 				950E2DA21DEC1F440053D79E /* test3.PNG */,
+				95A1C96E1DEECB1F007BCF3E /* white.PNG */,
 				950E2D581DE819230053D79E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -285,8 +285,8 @@
 				950E2D6A1DE819230053D79E /* LaunchScreen.storyboard in Resources */,
 				950E2D671DE819230053D79E /* Assets.xcassets in Resources */,
 				950E2D621DE819230053D79E /* Main.storyboard in Resources */,
-				950E2D9E1DEC1ADE0053D79E /* white.PNG in Resources */,
 				950E2DA31DEC1F440053D79E /* test1.PNG in Resources */,
+				95A1C96F1DEECB1F007BCF3E /* white.PNG in Resources */,
 				950E2DA41DEC1F440053D79E /* test2.PNG in Resources */,
 				950E2DA61DEC1F440053D79E /* test3.PNG in Resources */,
 			);
