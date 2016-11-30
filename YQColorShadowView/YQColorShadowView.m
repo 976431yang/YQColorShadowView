@@ -140,6 +140,7 @@
     self.showed = YES;
 }
 
+
 #pragma mark ---showIMG-绘制显示图片
 //计算&渲染&显示
 -(void)drawTheImage{
@@ -153,10 +154,6 @@
             self.mainIMGV.layer.cornerRadius = 0;
             self.mainShadowUp.layer.cornerRadius = 0;
         }
-        //image
-        if(!self.cutIMG){
-            self.cutIMG = [self getThumbImageWithImage:self.image andSize:self.bounds.size];
-        }
         
         dispatch_async(dispatch_get_main_queue(), ^{
             self.mainShadow.frame = self.bounds;
@@ -164,7 +161,9 @@
             self.mainShadow.layer.shadowOpacity = 0.6;
             self.mainShadow.layer.shadowColor = [UIColor lightGrayColor].CGColor;
             self.mainShadow.layer.shadowRadius = self.shadowWidth/2;
-            self.mainIMGV.image = self.cutIMG;
+            if((!self.mainIMGV.image)||(self.mainIMGV.image != self.cutIMG)){
+                self.mainIMGV.image = self.cutIMG;
+            }
             self.mainIMGV.frame = self.bounds;
             self.mainShadowUp.frame = self.mainIMGV.frame;
         });
@@ -173,19 +172,14 @@
         [self.filter setValue:ciImage forKey:kCIInputImageKey];
         [self.filter setValue:[NSNumber numberWithFloat:self.shadowWidth] forKey:kCIInputRadiusKey];
         
-        CIImage *outputimage = [self.filter valueForKey:kCIOutputImageKey];
-        [self.context drawImage:outputimage
-                         inRect:CGRectMake(0,
-                                           0,
-                                           self.backView.frame.size.width*2,
-                                           self.backView.frame.size.height*2)
-                       fromRect:CGRectMake(0,
-                                           0,
-                                           self.backView.frame.size.width*2,
-                                           self.backView.frame.size.height*2)];
+        CGImageRef outputimage = [self.context createCGImage:self.filter.outputImage
+                                                 fromRect:CGRectMake(-self.shadowWidth*4,
+                                                                     -self.shadowWidth*4,
+                                                                     (self.cutIMG.size.width+self.shadowWidth*4)*2,
+                                                                     (self.cutIMG.size.height+self.shadowWidth*4)*2)];
         
-        UIImage *outIMG = [UIImage imageWithCIImage:outputimage];
-        
+        UIImage *outIMG = [UIImage imageWithCGImage:outputimage];
+        CGImageRelease(outputimage);
         CGFloat bili = 1;
         
         if(self.cutIMG.size.width>=self.cutIMG.size.height){
@@ -197,8 +191,10 @@
         }
         bili = bili/2+0.001;
         
+        CGFloat WHB = self.frame.size.width/self.frame.size.height;
+        
         CGFloat showWidth = bili * outIMG.size.width;
-        CGFloat showHeight = bili * outIMG.size.height;
+        CGFloat showHeight = bili * outIMG.size.height / WHB;
         CGFloat showX = -(showWidth - self.frame.size.width)/2;
         CGFloat showY = -(showHeight - self.frame.size.height)/2;
         if(self.shadowLittleDown){
@@ -210,9 +206,8 @@
                                              showY,
                                              showWidth,
                                              showHeight);
-            self.backView.image = [UIImage imageWithCIImage:outputimage];
+            self.backView.image = outIMG;
             self.backView.alpha = self.shadowAlpha;
-            
             self.shadowRect = self.backView.frame;
             self.IMGVRect = self.mainIMGV.frame;
         });

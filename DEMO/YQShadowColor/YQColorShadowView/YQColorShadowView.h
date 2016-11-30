@@ -6,7 +6,7 @@
 //  Copyright © 2016年 ProblenChild. All rights reserved.
 //
 
-//注：已经启用GPU进行渲染了，请使用真机调试
+//注：请使用真机调试,模拟器渲染速度非常慢
 
 #import <UIKit/UIKit.h>
 

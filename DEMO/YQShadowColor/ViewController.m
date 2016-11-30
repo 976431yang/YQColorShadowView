@@ -60,8 +60,8 @@
     self.oldRect = self.shadowView.frame;
     
     UIAlertView *alertDialog = [[UIAlertView alloc]
-                   initWithTitle:@"注意"
-                   message:@"已开启GPU渲染，请使用真机调试"
+                   initWithTitle:@"请使用真机调试"
+                   message:@"请使用真机调试,模拟器渲染速度会很慢"
                    delegate:nil
                    cancelButtonTitle:@"OK"
                    otherButtonTitles:nil];
