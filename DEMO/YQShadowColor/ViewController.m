@@ -47,8 +47,6 @@
     //设置图片
     self.shadowView.image = [UIImage imageNamed:@"test2.PNG"];
     
-    
-    
     //--------------------------------------------------
     self.IMGArr = @[[UIImage imageNamed:@"test1.PNG"],
                     [UIImage imageNamed:@"test2.PNG"],
