@@ -36,8 +36,11 @@
                             viewFrame:目标frame
                           closeShadow:是否关闭阴影];
 ```
+######效果：
+![image](https://github.com/976431yang/YQColorShadowView/blob/master/DEMO/image/animation.gif)
 #####自定义参数
 ######支持一些自定义参数，这些参数 如果在 view第一次显示后发生改变，会立即生效，并重新渲染一遍
+######具体效果，可下载DEMO查看
 ```objective-c
     //更换图片
     ShadowView.image = [UIImage imageNamed:@"test.png"];
