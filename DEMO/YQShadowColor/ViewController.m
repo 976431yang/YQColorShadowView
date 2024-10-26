@@ -98,10 +98,7 @@
 }
 - (IBAction)closeShadowAndChangeFrame:(id)sender {
     [self.shadowView animationWithDuration:0.5
-                                 viewFrame:CGRectMake(30,
-                                                      30,
-                                                      150,
-                                                      150)
+                                 viewFrame:CGRectMake(30, 30, 150, 150)
                                closeShadow:YES];
 }
 - (IBAction)openShadowAndBackFrame:(id)sender {
@@ -111,10 +108,9 @@
 }
 - (IBAction)ChangeFrame:(id)sender {
     [self.shadowView animationWithDuration:0.5
-                                 viewFrame:CGRectMake(40,
-                                                      50,
-                                                      self.oldRect.size.width,
-                                                      self.oldRect.size.height/2)
+                                 viewFrame:CGRectMake(40, 50,
+                                           self.oldRect.size.width,
+                                           self.oldRect.size.height/2)
                                closeShadow:NO];
 }
 
