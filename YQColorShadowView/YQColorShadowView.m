@@ -12,87 +12,86 @@
 @interface YQColorShadowView()
 
 //标记第一次显示
-@property bool showed;
+@property (nonatomic, assign) bool showed;
 
 //显示图片的IMGV
-@property(nonatomic,strong)UIImageView  *mainIMGV;
+@property (nonatomic, strong) UIImageView * mainIMGV;
 
 //mainIMGV下方的灰色Shadow，在白色图片的时候起作用。存在原因是因为中心IMGV需要masktobound（圆角）
+@property (nonatomic, strong) UIView *mainShadow;
 
-@property(nonatomic,strong)UIView       *mainShadow;
-//给mainShadow产生阴影的View，frame和mainIMGV，不用mainIMGV是因为动画需要（有时需要关闭阴影）
-
-@property(nonatomic,strong)UIView       *mainShadowUp;
+//给mainShadow产生阴影的View，frame和mainIMGV想通，不用mainIMGV是因为动画需要（有时需要关闭阴影）
+@property (nonatomic, strong) UIView *mainShadowUp;
 
 //彩色模糊阴影 背景
-@property(nonatomic,strong)UIImageView  *backView;
+@property (nonatomic, strong) UIImageView *backView;
 
 //裁剪过的IMG，只裁剪一次。
-@property(nonatomic,strong)UIImage      *cutIMG;
+@property (nonatomic,strong) UIImage *cutIMG;
 
 //初始backView的frame
-@property CGRect shadowRect;
+@property (nonatomic, assign) CGRect shadowRect;
 
 //初始IMGV的frame
-@property CGRect IMGVRect;
+@property (nonatomic, assign) CGRect IMGVRect;
 
 //滤镜
-@property(nonatomic,strong)CIFilter     *filter;
+@property (nonatomic, strong) CIFilter *filter;
 //context
-@property(nonatomic,strong)CIContext    *context;
+@property (nonatomic, strong) CIContext *context;
 
 @end
 
 @implementation YQColorShadowView
 
 #pragma mark ---Set&Get
--(void)setImage:(UIImage *)image{
+- (void)setImage:(UIImage *)image {
     _image = image;
     self.cutIMG = [self getThumbImageWithImage:_image andSize:self.bounds.size];
-    if(self.showed){
+    if (self.showed) {
         [self drawTheImage];
     }
 }
--(void)setShowCornerRadius:(BOOL)showCornerRadius{
+- (void)setShowCornerRadius:(BOOL)showCornerRadius {
     _showCornerRadius = showCornerRadius;
-    if(self.showed){
+    if (self.showed) {
         [self drawTheImage];
     }
 }
--(void)setCornerWidth:(CGFloat)cornerWidth{
+- (void)setCornerWidth:(CGFloat)cornerWidth {
     _cornerWidth = cornerWidth;
-    if(self.showed){
+    if (self.showed) {
         [self drawTheImage];
     }
 }
--(void)setShadowAlpha:(CGFloat)shadowAlpha{
+- (void)setShadowAlpha:(CGFloat)shadowAlpha {
     _shadowAlpha = shadowAlpha;
-    if(self.showed){
+    if (self.showed) {
         [self drawTheImage];
     }
 }
--(void)setShadowWidth:(CGFloat)shadowWidth{
+- (void)setShadowWidth:(CGFloat)shadowWidth {
     _shadowWidth = shadowWidth;
-    if(self.showed){
+    if (self.showed) {
         [self drawTheImage];
     }
 }
--(void)setShadowLittleDown:(BOOL)shadowLittleDown{
+- (void)setShadowLittleDown:(BOOL)shadowLittleDown {
     _shadowLittleDown = shadowLittleDown;
-    if(self.showed){
+    if (self.showed) {
         [self drawTheImage];
     }
 }
--(void)setCloseShadow:(BOOL)closeShadow{
+- (void)setCloseShadow:(BOOL)closeShadow {
     _closeShadow = closeShadow;
-    if(self.showed){
+    if (self.showed) {
         [self drawTheImage];
     }
 }
 
 
 #pragma mark ---init-初始化
--(instancetype)initWithFrame:(CGRect)frame{
+- (instancetype)initWithFrame:(CGRect)frame {
     
     self = [super initWithFrame:frame];
     
@@ -119,10 +118,10 @@
     
     
     //mainshadow
-    self.mainShadow = [[UIView alloc]initWithFrame:self.bounds];
+    self.mainShadow = [[UIView alloc] initWithFrame:self.bounds];
     self.mainShadow.backgroundColor = [UIColor clearColor];
     [self addSubview:self.mainShadow];
-    self.mainShadowUp = [[UIView alloc]initWithFrame:self.bounds];
+    self.mainShadowUp = [[UIView alloc] initWithFrame:self.bounds];
     self.mainShadowUp.backgroundColor = [UIColor whiteColor];
     self.mainShadowUp.layer.masksToBounds = YES;
     [self.mainShadow addSubview:self.mainShadowUp];
@@ -142,7 +141,7 @@
 }
 
 #pragma mark ---delegate-系统代理
--(void)drawRect:(CGRect)rect{
+- (void)drawRect:(CGRect)rect {
     [self drawTheImage];
     self.showed = YES;
 }
@@ -150,14 +149,14 @@
 
 #pragma mark ---showIMG-绘制显示图片
 //计算&渲染&显示
--(void)drawTheImage{
+- (void)drawTheImage {
     
-    if(self.image != nil){
+    if (self.image != nil) {
         //圆角
-        if(self.showCornerRadius){
+        if (self.showCornerRadius) {
             self.mainIMGV.layer.cornerRadius = self.cornerWidth;
             self.mainShadowUp.layer.cornerRadius = self.cornerWidth;
-        }else{
+        } else {
             self.mainIMGV.layer.cornerRadius = 0;
             self.mainShadowUp.layer.cornerRadius = 0;
         }
@@ -168,7 +167,8 @@
             self.mainShadow.layer.shadowOpacity = 0.6;
             self.mainShadow.layer.shadowColor = [UIColor lightGrayColor].CGColor;
             self.mainShadow.layer.shadowRadius = self.shadowWidth/2;
-            if((!self.mainIMGV.image)||(self.mainIMGV.image != self.cutIMG)){
+            if ((!self.mainIMGV.image) ||
+                (self.mainIMGV.image != self.cutIMG)) {
                 self.mainIMGV.image = self.cutIMG;
             }
             self.mainIMGV.frame = self.bounds;
@@ -178,107 +178,108 @@
         
         CIImage *ciImage = [[CIImage alloc]initWithImage:self.cutIMG];
         [self.filter setValue:ciImage forKey:kCIInputImageKey];
-        [self.filter setValue:[NSNumber numberWithFloat:self.shadowWidth] forKey:kCIInputRadiusKey];
+        [self.filter setValue:[NSNumber numberWithFloat:self.shadowWidth]
+                       forKey:kCIInputRadiusKey];
         
+        CGFloat scale = [UIScreen mainScreen].scale;
+        CGRect outSize = CGRectMake(-self.shadowWidth * 4,
+                                    -self.shadowWidth * 4,
+                                    self.cutIMG.size.width * scale +
+                                        self.shadowWidth * 8,
+                                    self.cutIMG.size.height * scale +
+                                        self.shadowWidth * 8);
         CGImageRef outputimage = [self.context createCGImage:self.filter.outputImage
-                                                 fromRect:CGRectMake(-self.shadowWidth*4,
-                                                                     -self.shadowWidth*4,
-                                                                     (self.cutIMG.size.width+self.shadowWidth*4)*2,
-                                                                     (self.cutIMG.size.height+self.shadowWidth*4)*2)];
+                                                 fromRect:outSize];
         
         UIImage *outIMG = [UIImage imageWithCGImage:outputimage];
         CGImageRelease(outputimage);
         CGFloat bili = 1;
         
-        if(self.cutIMG.size.width>=self.cutIMG.size.height){
+        if (self.cutIMG.size.width >= self.cutIMG.size.height) {
             //按宽缩放
-            bili = self.frame.size.width/self.cutIMG.size.width;
-        }else{
+            bili = self.frame.size.width / self.cutIMG.size.width;
+        } else {
             //按高缩放
-            bili = self.frame.size.height/self.cutIMG.size.height;
+            bili = self.frame.size.height / self.cutIMG.size.height;
         }
-        bili = bili/2+0.001;
+        bili = bili / scale + 0.001;
         
-        CGFloat WHB = self.frame.size.width/self.frame.size.height;
+        CGFloat WHB = self.frame.size.width / self.frame.size.height;
         
         CGFloat showWidth = bili * outIMG.size.width;
         CGFloat showHeight = bili * outIMG.size.height / WHB;
-        CGFloat showX = -(showWidth - self.frame.size.width)/2;
-        CGFloat showY = -(showHeight - self.frame.size.height)/2;
-        if(self.shadowLittleDown){
-            showY = showY+10;
+        CGFloat showX = -(showWidth - self.frame.size.width) / 2;
+        CGFloat showY = -(showHeight - self.frame.size.height) / 2;
+        if (self.shadowLittleDown) {
+            showY = showY + 10;
         }
         
-        if(self.closeShadow){
+        if (self.closeShadow) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                CGFloat width = showWidth *0.6;
-                CGFloat height = showHeight *0.6 ;
-                CGFloat x = -(width - self.frame.size.width)/2;
-                CGFloat Y = -(height - self.frame.size.height)/2;
+                CGFloat width = showWidth * 0.6;
+                CGFloat height = showHeight * 0.6 ;
+                CGFloat x = -(width - self.frame.size.width) / 2;
+                CGFloat Y = -(height - self.frame.size.height) / 2;
                 self.backView.frame = CGRectMake(x, Y, width, height);
-                self.mainShadow.frame = CGRectMake((self.bounds.size.width-self.bounds.size.width*0.5)/2,
-                                                   (self.bounds.size.height-self.bounds.size.height*0.5)/2,
-                                                   self.bounds.size.width*0.5,
-                                                   self.bounds.size.height*0.5);
+                CGFloat mainX = (self.bounds.size.width -
+                                 self.bounds.size.width * 0.5) / 2;
+                CGFloat mainY = (self.bounds.size.height -
+                                 self.bounds.size.height * 0.5) / 2;
+                self.mainShadow.frame = CGRectMake(mainX, mainY,
+                                                   self.bounds.size.width * 0.5,
+                                                   self.bounds.size.height * 0.5);
                 self.mainShadowUp.frame = self.mainShadow.bounds;
                 self.mainIMGV.frame = self.bounds;
                 self.backView.image = outIMG;
                 self.backView.alpha = self.shadowAlpha;
-                self.shadowRect = CGRectMake(showX,
-                                             showY,
+                self.shadowRect = CGRectMake(showX, showY,
                                              showWidth,
                                              showHeight);
             });
-        }else{
+        } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.backView.frame = CGRectMake(showX,
-                                                 showY,
-                                                 showWidth,
-                                                 showHeight);
+                self.backView.frame = CGRectMake(showX, showY,
+                                                 showWidth, showHeight);
                 self.backView.image = outIMG;
                 self.backView.alpha = self.shadowAlpha;
                 self.shadowRect = self.backView.frame;
             });
         }
-    }else{
+    } else {
         NSLog(@"没有传入图片，不显示");
     }
 }
 
 #pragma mark ---裁剪图片
--(UIImage *)getThumbImageWithImage:(UIImage *)image andSize:(CGSize)Size{
+- (UIImage *)getThumbImageWithImage:(UIImage *)image andSize:(CGSize)size {
     
-    UIGraphicsBeginImageContextWithOptions(Size, NO, 0.0);
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
     
-    CGRect rect = CGRectMake(0,
-                             0,
-                             Size.width,
-                             Size.height);
+    CGRect rect = CGRectMake(0, 0,
+                             size.width,
+                             size.height);
     
     
-    CGFloat bili_imageWH = image.size.width/image.size.height;
-    CGFloat bili_SizeWH  = Size.width/Size.height;
+    CGFloat bili_imageWH = image.size.width / image.size.height;
+    CGFloat bili_SizeWH  = size.width / size.height;
     
     if (bili_imageWH > bili_SizeWH) {
-        CGFloat bili_SizeH_imageH = Size.height/image.size.height;
-        CGFloat height = image.size.height*bili_SizeH_imageH;
+        CGFloat bili_sizeH_imageH = size.height / image.size.height;
+        CGFloat height = image.size.height * bili_sizeH_imageH;
         CGFloat width = height * bili_imageWH;
-        CGFloat x = -(width - Size.width)/2;
+        CGFloat x = -(width - size.width)/2;
         CGFloat y = 0;
         rect = CGRectMake(x,
                           y,
                           width,
                           height);
-    }else{
-        CGFloat bili_SizeW_imageW = Size.width/image.size.width;
+    } else {
+        CGFloat bili_SizeW_imageW = size.width / image.size.width;
         CGFloat width = image.size.width * bili_SizeW_imageW;
         CGFloat height = width / bili_imageWH;
         CGFloat x = 0;
-        CGFloat y = -(height - Size.height)/2;
-        rect = CGRectMake(x,
-                          y,
-                          width,
-                          height);
+        CGFloat y = -(height - size.height) / 2;
+        rect = CGRectMake(x, y, width, height);
     }
     
     [[UIColor clearColor] set];
@@ -287,15 +288,13 @@
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return newImage;
-    
 }
 
 
 #pragma mark ---动画
--(void)animationWithDuration:(float)time
-                   viewFrame:(CGRect)viewFrame
-                 closeShadow:(BOOL)closeShadow
-{
+- (void)animationWithDuration:(float)time
+                    viewFrame:(CGRect)viewFrame
+                  closeShadow:(BOOL)closeShadow {
     [UIView animateWithDuration:time animations:^{
         
         self.frame = viewFrame;
@@ -307,11 +306,11 @@
         CGFloat heightBili = self.bounds.size.height / IMGVBeforeRect.size.height;
         
         
-        if(closeShadow){
+        if (closeShadow) {
             CGFloat width = shadowBeforeRect.size.width * widthBili*0.6;
             CGFloat height = shadowBeforeRect.size.height *heightBili *0.6 ;
-            CGFloat x = -(width - self.frame.size.width)/2;
-            CGFloat Y = -(height - self.frame.size.height)/2;
+            CGFloat x = -(width - self.frame.size.width) / 2;
+            CGFloat Y = -(height - self.frame.size.height) / 2;
             self.backView.frame = CGRectMake(x, Y, width, height);
             self.mainShadow.frame = CGRectMake((self.bounds.size.width-self.bounds.size.width*0.5)/2,
                                                (self.bounds.size.height-self.bounds.size.height*0.5)/2,
@@ -320,21 +319,19 @@
             self.mainShadowUp.frame = self.mainShadow.bounds;
             self.mainIMGV.frame = self.bounds;
             
-        }else{
+        } else {
             CGFloat width = shadowBeforeRect.size.width * widthBili;
-            CGFloat height = shadowBeforeRect.size.height *heightBili ;
+            CGFloat height = shadowBeforeRect.size.height * heightBili ;
             CGFloat x = -(width - self.frame.size.width)/2;
             CGFloat Y = -(height - self.frame.size.height)/2;
-            if(self.shadowLittleDown){
-                Y = Y+(10*heightBili);
+            if (self.shadowLittleDown) {
+                Y = Y + (10 * heightBili);
             }
             self.backView.frame = CGRectMake(x, Y, width, height);
             self.mainShadow.frame = self.bounds;
             self.mainShadowUp.frame = self.bounds;
             self.mainIMGV.frame = self.bounds;
         }
-        
-        
     }];
 }
 

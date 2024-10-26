@@ -211,7 +211,7 @@
         CGFloat showX = -(showWidth - self.frame.size.width) / 2;
         CGFloat showY = -(showHeight - self.frame.size.height) / 2;
         if (self.shadowLittleDown) {
-            showY = showY + 5;
+            showY = showY + 10;
         }
         
         if (self.closeShadow) {
